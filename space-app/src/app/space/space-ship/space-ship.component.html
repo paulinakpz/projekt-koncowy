@@ -5,3 +5,5 @@
 <div class="health" [title]="'Health' + spaceShip.health + '%' ">
   <div [style.width.%]="spaceShip.health"></div>
 </div>
+<div class="property" [class.active]="spaceShip.activeWeapon">WEAPONS</div>
+<div class="property" [class.active]="spaceShip.activeShields">SHIELDS</div>
