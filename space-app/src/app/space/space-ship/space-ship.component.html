@@ -3,7 +3,7 @@
     <img [src]="spaceShip.imageUrl">
     <img class="pilot" *ngIf="spaceShip.pilot" [src] ="spaceShip.pilot.imageUrl">
 </div>
-<div class="health" [title]="'Health' + spaceShip.health + '%' ">
+<div class="health" [title]="'Health' + spaceShip.health + ' %' ">
   <div [style.width.%]="spaceShip.health"></div>
 </div>
 <div class="property" [class.active]="spaceShip.activeWeapon">WEAPONS</div>
