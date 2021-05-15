@@ -1,6 +1,9 @@
-<div>
-    <p>Pilot: {{pilot.fullName}}</p>
-    <img class = "pilot-image" [src]="pilot.imageUrl">
+<div class="single-pilot">
+    <div>
+        <p>Pilot: {{ pilot.fullName }}</p>
+        <img class="pilot-image" [src]="pilot.imageUrl" />
+    </div>
+    <ng-content></ng-content>
 </div>
-<ng-content></ng-content> 
+
 

@@ -10,6 +10,7 @@ import { SpaceShip } from '../space-ship';
 export class SpaceShipComponent implements OnInit {
 
   @Input () spaceShip: SpaceShip;
+  
   constructor() { }
 
   ngOnInit(): void {
