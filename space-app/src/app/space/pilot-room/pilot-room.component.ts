@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit , Output , EventEmitter} from '@angular/core';
+
 import { Pilot } from '../pilot';
 
 @Component({
@@ -7,7 +8,7 @@ import { Pilot } from '../pilot';
   styleUrls: ['./pilot-room.component.css']
 })
 export class PilotRoomComponent implements OnInit {
-
+  @Output() selected = new EventEmitter<Pilot>();
   pilots: Pilot[]=[];
   selectedPilot: Pilot = null;
   constructor() { }
@@ -20,5 +21,13 @@ export class PilotRoomComponent implements OnInit {
   }
   select(pilot: Pilot) : void {
     this.selectedPilot = pilot;
+    this.selected.emit(pilot);
+    }
+
+    pilotLeave():void {
+
+    }
+    pilotReturn(pilot: Pilot):void {
+      
     }
 }

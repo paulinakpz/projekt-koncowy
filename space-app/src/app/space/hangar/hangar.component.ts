@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { ChildActivationEnd } from '@angular/router';
 import { BomberShip } from '../bomber-ship';
 import { FighterShip } from '../fighter-ship';
 import { Pilot } from '../pilot';
+import { PilotRoomComponent } from '../pilot-room/pilot-room.component';
 import { SpaceShip } from '../space-ship'
 
 @Component({
@@ -10,12 +12,25 @@ import { SpaceShip } from '../space-ship'
   styleUrls: ['./hangar.component.css']
 })
 export class HangarComponent implements OnInit {
+  @ViewChild(PilotRoomComponent) pilotRoom: PilotRoomComponent; 
   spaceShips: SpaceShip[]=[];
+  selectedPilot : Pilot = null;
   constructor() { }
 
   ngOnInit(): void {
-    this.spaceShips.push(new FighterShip(new Pilot('Jas Nowak' , '/assets/pilot1.png')));
-    this.spaceShips.push(new BomberShip(new Pilot('Tomek Kowalski')))
-    console.log(this.spaceShips)
+    this.spaceShips.push(new FighterShip())
+    // this.spaceShips.push(new FighterShip(new Pilot('Jas Nowak' , '/assets/pilot1.png')));
+    this.spaceShips.push(new BomberShip())
+    // this.spaceShips.push(new BomberShip(new Pilot('Tomek Kowalski')))
+    
   }
+  assignPilot(spaceShip: SpaceShip): void {
+    console.log("assing" , spaceShip)
+
+  }
+  deassignPilot(spaceShip: SpaceShip): void {
+    console.log("deassing" , spaceShip)
+    
+  }
+
 }
