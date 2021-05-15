@@ -22,12 +22,16 @@ export class PilotRoomComponent implements OnInit {
   select(pilot: Pilot) : void {
     this.selectedPilot = pilot;
     this.selected.emit(pilot);
+    console.log("select" , pilot)
     }
 
     pilotLeave():void {
-
+      const index = this.pilots.indexOf(this.selectedPilot);
+      this.pilots.splice(index, 1)
+      this.select(null);
     }
     pilotReturn(pilot: Pilot):void {
-      
+      this.pilots.push(pilot);
+    
     }
 }

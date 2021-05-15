@@ -18,19 +18,18 @@ export class HangarComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.spaceShips.push(new FighterShip())
+    this.spaceShips.push(new FighterShip());
     // this.spaceShips.push(new FighterShip(new Pilot('Jas Nowak' , '/assets/pilot1.png')));
     this.spaceShips.push(new BomberShip())
     // this.spaceShips.push(new BomberShip(new Pilot('Tomek Kowalski')))
     
   }
-  assignPilot(spaceShip: SpaceShip): void {
-    console.log("assing" , spaceShip)
-
+  assignPilot(spaceShip:SpaceShip):void{
+    spaceShip.pilot = this.selectedPilot;
+    this.pilotRoom.pilotLeave();
   }
-  deassignPilot(spaceShip: SpaceShip): void {
-    console.log("deassing" , spaceShip)
-    
+  deassignPilot(spaceShip:SpaceShip):void{
+    this.pilotRoom.pilotReturn(spaceShip.pilot);
+    spaceShip.pilot = null
   }
-
 }
