@@ -1,7 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { OrderFromValue } from '../order-from-value';
+import { SpaceShip } from '../space-ship';
 import { SpaceShipType } from '../space-ship-type.enum';
+import { SpaceShipService } from '../space-ship.service';
+import { map } from 'rxjs/operators'
 
 interface ShipType {
   label: string,
@@ -14,7 +17,6 @@ interface ShipType {
   styleUrls: ['./engineers-room.component.css']
 })
 export class EngineersRoomComponent implements OnInit {
-
   spaceShipTypes: ShipType[] = [
     {label: 'Myśliwiec' , value: SpaceShipType.Fighter},
     {label: 'Bombowiec' , value: SpaceShipType.Bomber}
@@ -27,12 +29,19 @@ export class EngineersRoomComponent implements OnInit {
   shipCount: new FormControl(1 , {validators: [Validators.required , Validators.min(1) , Validators.max(5)]
   })
 })
-  constructor() { }
+isProducing = false;
+shipCount = this.spaceShipService.hangarShips.pipe(
+  map((ships)=>ships.length)
+)
+  constructor(private spaceShipService: SpaceShipService) { }
 
   ngOnInit(): void {
   }
 
   orderSpaceShip(formValue: OrderFromValue) {
-console.log(formValue)
+    this.isProducing = true;
+    this.spaceShipService.produceShips(formValue).subscribe({
+      complete: () => this.isProducing = false
+    })
   }
 }

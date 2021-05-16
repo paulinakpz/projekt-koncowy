@@ -17,6 +17,7 @@ export class PilotRoomComponent implements OnInit {
 
     this.pilots.push(new Pilot('Tom Bern' , '/assets/pilot1.png'));
     this.pilots.push(new Pilot('Bob Hovey'));
+    this.pilots.push(new Pilot('Andrew Soho' ));
     // console.log('pilots', this.pilots)
   }
   select(pilot: Pilot) : void {
