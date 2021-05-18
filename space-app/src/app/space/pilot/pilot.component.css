@@ -1,6 +1,10 @@
-/* .pilot-image{
-    width: 40%;
-} */
-/* .single-pilot {
-    border: 2px solid black;
-} */
+:host {
+    padding:5px;
+    margin:5px;
+    display: block;
+}
+
+:host.selected{
+    background-color: rgb(169, 198, 201);
+    display: block;
+}
