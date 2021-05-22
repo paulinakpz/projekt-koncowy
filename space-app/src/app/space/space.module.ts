@@ -10,6 +10,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { EngineersRoomComponent } from './engineers-room/engineers-room.component';
 import { SharedModule } from '../shared/shared.module';
 import {MatButtonModule} from '@angular/material/button';
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import {MatButtonModule} from '@angular/material/button';
     SpaceRoutingModule, 
     SharedModule,
     ReactiveFormsModule, 
-    MatButtonModule
+    MatButtonModule,
+    MatInputModule
   ]
 })
 export class SpaceModule { }

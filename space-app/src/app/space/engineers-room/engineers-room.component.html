@@ -1,31 +1,52 @@
+<p>Aktualna liczba samolotów to: {{ shipCount | async }}</p>
 <div class="form-container">
+  <form [formGroup]="form" (ngSubmit)="orderSpaceShip(form.value)">
+    <div class="control-group">
+      <mat-form-field appearance="fill">
+        <mat-label>Podaj ilość</mat-label>
+        <input
+          type="number"
+          formControlName="shipCount"
+          class="mat-form-field"
+          matInput
+        />
+      </mat-form-field>
 
-  <p>Aktualna liczba samolotów to: {{shipCount| async }} </p>
-<form [formGroup]="form" (ngSubmit)="orderSpaceShip(form.value)">
-  <div class="control-group">
-    <label class="control-label">ILOSC:</label>
-    <input type="number" formControlName="shipCount" />
-    
-      <span *ngIf="form.get('shipCount').hasError('required')" class="error">podaj wartość</span>
-      <span *ngIf="form.get('shipCount').hasError('min') || form.get('shipCount').hasError('max')" class="error">podaj liczbe z zakresu 1- 5 </span>
-    
-    
-  </div>
+      <span *ngIf="form.get('shipCount').hasError('required')" class="error"
+        >podaj wartość</span
+      >
+      <span
+        *ngIf="
+          form.get('shipCount').hasError('min') ||
+          form.get('shipCount').hasError('max')
+        "
+        class="error"
+        >podaj liczbe z zakresu 1- 5
+      </span>
+    </div>
 
-  <div class="control-group">
-    <label class="control-label">TYP:</label>
-    <label *ngFor="let spaceShipType of spaceShipTypes">
-      <input
-        type="radio"
-        formControlName="shipType"
-        [value]="spaceShipType.value"
-      />
-      {{ spaceShipType.label }}
-    </label>
-  </div>
-  <div class="control-group">
-    <button mat-raised-button color="basic" type="submit" [disabled]="form.invalid || isProducing">Produkuj</button>
-    <p *ngIf="isProducing">Trwa produkcja...</p>
-  </div>
-</form>
+    <div class="control-group">
+      <label class="control-label">Wybierz typ:</label><br />
+      <br /><label *ngFor="let spaceShipType of spaceShipTypes">
+        <input
+          type="radio"
+          formControlName="shipType"
+          [value]="spaceShipType.value"
+        />
+        {{ spaceShipType.label }}
+        <br />
+      </label>
+    </div>
+    <div class="control-group">
+      <button
+        mat-raised-button
+        color="basic"
+        type="submit"
+        [disabled]="form.invalid || isProducing"
+      >
+        Produkuj
+      </button>
+      <p *ngIf="isProducing">Trwa produkcja...</p>
+    </div>
+  </form>
 </div>

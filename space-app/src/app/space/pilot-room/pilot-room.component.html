@@ -1,4 +1,3 @@
-<h1>Pilot Room</h1>
 <app-pilot *ngFor="let pilot of pilots" [pilot]="pilot" [class.selected]="selectedPilot === pilot">
   <button mat-raised-button color="basic" class="select-button" *ngIf="selectedPilot !== pilot; else deselectButton" (click)="select(pilot)">
     Zaznacz

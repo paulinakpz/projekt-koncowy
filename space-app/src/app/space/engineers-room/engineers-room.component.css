@@ -4,7 +4,7 @@
     justify-content: center;
 }
 form {
-    padding: 30px;
+    padding: 20px;
     margin-top: 20px;
     border: 3px solid white;
 }
@@ -17,3 +17,9 @@ form {
     padding: 5px;
     display: block;
 }
+mat-form-field.mat-form-field {
+    color:white;
+  }
+  mat-label {
+      color:white;
+  }

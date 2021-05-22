@@ -1,11 +1,10 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormGroup , Validators } from '@angular/forms';
 import { OrderFromValue } from '../order-from-value';
 import { SpaceShip } from '../space-ship';
 import { SpaceShipType } from '../space-ship-type.enum';
 import { SpaceShipService } from '../space-ship.service';
 import { map } from 'rxjs/operators';
-
 interface ShipType {
   label: string,
   value: SpaceShipType
