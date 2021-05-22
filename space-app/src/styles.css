@@ -1,6 +1,7 @@
 body {
     background-image: url('./assets/tlo.jpg');
     color: #fff;
+    letter-spacing: 1px;
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
