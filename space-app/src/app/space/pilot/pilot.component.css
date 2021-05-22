@@ -2,9 +2,14 @@
     padding:5px;
     margin:5px;
     display: block;
+    width: 160px;
+    margin: auto;
 }
 
 :host.selected{
     background-color: rgb(169, 198, 201);
-    display: block;
+    
+}
+.pilot-image {
+    width: 80%;
 }

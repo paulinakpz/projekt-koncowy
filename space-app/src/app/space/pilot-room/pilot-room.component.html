@@ -1,10 +1,14 @@
-<app-pilot *ngFor="let pilot of pilots" [pilot]="pilot" [class.selected]="selectedPilot === pilot">
-  <button mat-raised-button color="basic" class="select-button" *ngIf="selectedPilot !== pilot; else deselectButton" (click)="select(pilot)">
-    Zaznacz
-  </button>
-  <ng-template #deselectButton>
-    <button mat-raised-button color="basic" class="deselect-button" (click)="select(null)">
-      Odznacz
+<div class="pilots">
+  <app-pilot *ngFor="let pilot of pilots" [pilot]="pilot" [class.selected]="selectedPilot === pilot">
+    <button mat-raised-button color="basic" class="select-button" *ngIf="selectedPilot !== pilot; else deselectButton" (click)="select(pilot)">
+      Zaznacz
     </button>
-  </ng-template>
-</app-pilot>
+    <ng-template #deselectButton>
+      <button mat-raised-button color="basic" class="deselect-button" (click)="select(null)">
+        Odznacz
+      </button>
+    </ng-template>
+  </app-pilot>
+</div>
+
+

@@ -8,16 +8,16 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import {MatButtonModule} from '@angular/material/button';
 import {MatSidenavModule} from '@angular/material/sidenav';
-import { MatToolbarModule} from '@angular/material/toolbar';
 import { MatIconModule} from '@angular/material/icon';
-import { MatDividerModule} from '@angular/material/divider';
 import { AboutComponent } from './about/about.component';
+import { SidenavComponent } from './sidenav/sidenav.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    AboutComponent
+    AboutComponent,
+    SidenavComponent
   ],
   imports: [
     BrowserModule,
@@ -26,11 +26,9 @@ import { AboutComponent } from './about/about.component';
     HttpClientModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatToolbarModule,
     MatSidenavModule,
-    MatIconModule,
-    MatDividerModule,
-  ],
+    MatIconModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

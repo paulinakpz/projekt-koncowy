@@ -1,26 +1,7 @@
 <mat-drawer-container autosize>
-  <mat-drawer #drawer class="example-sidenav" mode="side">
-    <a routerLink="">
-      <button mat-button class="menu-button">
-        <mat-icon>home</mat-icon>
-        <span>Home</span>
-      </button>
-    </a>
-    <a routerLink="/about">
-      <button mat-button class="menu-button">
-        <mat-icon>info</mat-icon>
-        <span>About</span>
-      </button>
-    </a>
-
-    <!-- <mat-divider></mat-divider> -->
-
-    <!-- <button mat-button class="menu-button">
-            <mat-icon>help</mat-icon>
-            <span>Help</span>
-        </button> -->
-  </mat-drawer>
-
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+    <app-sidenav></app-sidenav>
+</mat-drawer>
   <div>
     <div class="menu-button">
       <button type="button" mat-button (click)="drawer.toggle()" class="menu">
