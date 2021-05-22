@@ -8,15 +8,17 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "api" : "json-server --watch api/data.json --port 9020"
+    "api": "json-server --watch api/data.json --port 9020"
   },
   "private": true,
   "dependencies": {
     "@angular/animations": "~11.2.9",
+    "@angular/cdk": "^11.2.13",
     "@angular/common": "~11.2.9",
     "@angular/compiler": "~11.2.9",
     "@angular/core": "~11.2.9",
     "@angular/forms": "~11.2.9",
+    "@angular/material": "^11.2.13",
     "@angular/platform-browser": "~11.2.9",
     "@angular/platform-browser-dynamic": "~11.2.9",
     "@angular/router": "~11.2.9",

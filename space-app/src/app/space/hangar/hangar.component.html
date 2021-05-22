@@ -5,13 +5,13 @@
       *ngFor="let spaceShip of spaceShips|async"
       [spaceShip]="spaceShip"
     >
-      <button
+      <button mat-flat-button color="basic"
         *ngIf="selectedPilot && !spaceShip.pilot"
         (click)="assignPilot(spaceShip)"
       >
         Pilotuj
       </button>
-      <button *ngIf="spaceShip.pilot" (click)="deassignPilot(spaceShip)">
+      <button mat-flat-button color="basic" *ngIf="spaceShip.pilot" (click)="deassignPilot(spaceShip)">
         Opuść
       </button>
     </app-space-ship>

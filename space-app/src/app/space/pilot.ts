@@ -4,7 +4,6 @@ export interface PilotAttrs {
   lastName: string,
   imageUrl?: string
 } 
-
 export class Pilot {
   id:number;
     firstName: string;

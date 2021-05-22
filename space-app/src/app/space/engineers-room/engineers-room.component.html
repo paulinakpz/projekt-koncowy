@@ -1,6 +1,6 @@
 <div class="form-container">
 
-  <p>Aktualna liczba samolotów to: {{shipCount|async}} </p>
+  <p>Aktualna liczba samolotów to: {{shipCount| async }} </p>
 <form [formGroup]="form" (ngSubmit)="orderSpaceShip(form.value)">
   <div class="control-group">
     <label class="control-label">ILOSC:</label>
@@ -24,7 +24,7 @@
     </label>
   </div>
   <div class="control-group">
-    <button type="submit" [disabled]="form.invalid || isProducing">Produkuj</button>
+    <button mat-raised-button color="basic" type="submit" [disabled]="form.invalid || isProducing">Produkuj</button>
     <p *ngIf="isProducing">Trwa produkcja...</p>
   </div>
 </form>

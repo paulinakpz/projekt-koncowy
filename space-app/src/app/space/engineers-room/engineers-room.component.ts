@@ -4,7 +4,7 @@ import { OrderFromValue } from '../order-from-value';
 import { SpaceShip } from '../space-ship';
 import { SpaceShipType } from '../space-ship-type.enum';
 import { SpaceShipService } from '../space-ship.service';
-import { map } from 'rxjs/operators'
+import { map } from 'rxjs/operators';
 
 interface ShipType {
   label: string,

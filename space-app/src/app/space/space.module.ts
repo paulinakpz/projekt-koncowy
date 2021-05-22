@@ -9,7 +9,7 @@ import { PilotRoomComponent } from './pilot-room/pilot-room.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { EngineersRoomComponent } from './engineers-room/engineers-room.component';
 import { SharedModule } from '../shared/shared.module';
-
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -27,7 +27,8 @@ import { SharedModule } from '../shared/shared.module';
     CommonModule,
     SpaceRoutingModule, 
     SharedModule,
-    ReactiveFormsModule
+    ReactiveFormsModule, 
+    MatButtonModule
   ]
 })
 export class SpaceModule { }
