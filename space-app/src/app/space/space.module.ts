@@ -11,6 +11,7 @@ import { EngineersRoomComponent } from './engineers-room/engineers-room.componen
 import { SharedModule } from '../shared/shared.module';
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
+import { DestructionRoomComponent } from './destruction-room/destruction-room.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {MatInputModule} from '@angular/material/input';
     SpaceShipComponent,
     PilotComponent,
     PilotRoomComponent,
-    EngineersRoomComponent
+    EngineersRoomComponent,
+    DestructionRoomComponent
   ],
   exports: [
     HangarComponent

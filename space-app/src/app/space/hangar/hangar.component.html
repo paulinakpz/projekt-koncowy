@@ -20,6 +20,15 @@
     <h1>My Pilots</h1>
     <app-pilot-room (selected)="selectedPilot = $event"></app-pilot-room>
     <div class="engineers-container">
+      <div class="sub-nav">
+        <a routerLink="production" routerLinkActive="active">Production</a>
+        
+        <a routerLink="destruction" routerLinkActive="active">Destruction</a>
+      </div>
+      
+      <router-outlet>
+
+      </router-outlet>
       <app-engineers-room
         
       ></app-engineers-room>

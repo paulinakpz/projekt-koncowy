@@ -10,3 +10,15 @@
     text-align: center;
   }
   
+a {
+  font-weight: bold;
+  color: white;
+  display: block;
+}
+a:active {
+  color: orange
+}
+.sub-nav {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}

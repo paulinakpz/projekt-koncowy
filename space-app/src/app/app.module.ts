@@ -11,13 +11,15 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import { MatIconModule} from '@angular/material/icon';
 import { AboutComponent } from './about/about.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
+import { BlackHoleComponent } from './black-hole/black-hole.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     AboutComponent,
-    SidenavComponent
+    SidenavComponent,
+    BlackHoleComponent
   ],
   imports: [
     BrowserModule,
