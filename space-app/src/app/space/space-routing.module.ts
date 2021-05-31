@@ -13,7 +13,7 @@ const routes: Routes = [
     { path: 'production', component: EngineersRoomComponent},
     { path: 'destruction', component: DestructionRoomComponent},
     { path: 'about' , component: AboutComponent},
-    { path: '', redirectTo: 'production' ,  pathMatch: 'full'},
+    // { path: '', redirectTo: 'production' ,  pathMatch: 'full'},
     
   ] 
 },

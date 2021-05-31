@@ -12,7 +12,7 @@ import { SharedModule } from '../shared/shared.module';
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import { DestructionRoomComponent } from './destruction-room/destruction-room.component';
-
+import {MatIconModule} from '@angular/material/icon';
 @NgModule({
   declarations: [
     HangarComponent,
@@ -32,7 +32,8 @@ import { DestructionRoomComponent } from './destruction-room/destruction-room.co
     SharedModule,
     ReactiveFormsModule, 
     MatButtonModule,
-    MatInputModule
+    MatInputModule,
+    MatIconModule
   ]
 })
 export class SpaceModule { }

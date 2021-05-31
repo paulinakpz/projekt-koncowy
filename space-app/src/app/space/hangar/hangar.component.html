@@ -21,17 +21,17 @@
     <app-pilot-room (selected)="selectedPilot = $event"></app-pilot-room>
     <div class="engineers-container">
       <div class="sub-nav">
-        <a routerLink="production" routerLinkActive="active">Production</a>
+        <a routerLink="production" routerLinkActive="active"> <mat-icon>add_circle</mat-icon>&nbsp;Production  </a>
         
-        <a routerLink="destruction" routerLinkActive="active">Destruction</a>
+        <a routerLink="destruction" routerLinkActive="active"> <mat-icon>delete_forever</mat-icon>&nbsp;Destruction </a>
       </div>
       
       <router-outlet>
 
       </router-outlet>
-      <app-engineers-room
+      <!-- <app-engineers-room
         
-      ></app-engineers-room>
+      ></app-engineers-room> -->
     </div>
   </div>
 </div>

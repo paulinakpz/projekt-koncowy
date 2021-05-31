@@ -19,6 +19,10 @@ a:active {
   color: orange
 }
 .sub-nav {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin: 20px 0;
+  padding: 15px;
+  border: 2px solid white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
