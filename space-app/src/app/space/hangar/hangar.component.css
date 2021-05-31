@@ -24,8 +24,12 @@ a:active {
   padding: 15px;
   border: 2px solid white;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+}
+.router-link {
+  padding: 5px 20px;
 }
 mat-icon {
   position: absolute;
