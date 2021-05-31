@@ -6,8 +6,9 @@ mat-drawer {
     color: rgba(255, 255, 255, 0.911);
 }
 .mat-drawer-container {
-    background-color: #fafafa11;
+    background-image: url(../assets/tlo.jpg);
     color: rgba(255, 255, 255, 0.911);
+    height: 100vh;
 }
 .menu {
     font-size: 1.7em;
