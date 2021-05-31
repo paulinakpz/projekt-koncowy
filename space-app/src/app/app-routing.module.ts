@@ -1,17 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
-import { AboutComponent } from  './about/about.component';
-import { BlackHoleComponent } from './black-hole/black-hole.component';
-
+import { AboutComponent } from './about/about.component';
 const routes: Routes = [
-  { path: '' , redirectTo:'space' , pathMatch: 'full'}
-
-// { path: '**' , component: BlackHoleComponent}
+  { path: 'about', component: AboutComponent },
+  { path: '', redirectTo: 'space', pathMatch: 'full' }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

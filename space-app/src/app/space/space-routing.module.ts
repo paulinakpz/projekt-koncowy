@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AboutComponent } from '../about/about.component';
+import { BlackHoleComponent } from '../black-hole/black-hole.component';
 import { DestructionRoomComponent } from './destruction-room/destruction-room.component';
 import { EngineersRoomComponent } from './engineers-room/engineers-room.component';
 import { HangarComponent } from './hangar/hangar.component';
@@ -11,12 +11,10 @@ const routes: Routes = [
   component: HangarComponent, 
   children: [
     { path: 'production', component: EngineersRoomComponent},
-    { path: 'destruction', component: DestructionRoomComponent},
-    { path: 'about' , component: AboutComponent},
-    // { path: '', redirectTo: 'production' ,  pathMatch: 'full'},
-    
+    { path: 'destruction', component: DestructionRoomComponent}
   ] 
 },
+{ path: '**' , component: BlackHoleComponent}
 ];
 
 @NgModule({
