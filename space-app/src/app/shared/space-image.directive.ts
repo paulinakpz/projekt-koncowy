@@ -10,10 +10,10 @@ zoom = 1.0;
   @HostBinding('style.transform') get scale() {
     return `scale(${this.zoom})`
   } 
-  @HostListener('mousemove') zoomIn() {
-    this.zoom += 0.005;
+  @HostListener('mouseover') zoomIn() {
+    this.zoom += 0.02;
   }
-  @HostListener('mouseover') zoomOut() {
-    this.zoom -= 0.005;
+  @HostListener('mouseleave') zoomOut() {
+    this.zoom -= 0.02;
   }
 }
