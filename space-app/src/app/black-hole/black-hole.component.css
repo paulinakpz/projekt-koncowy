@@ -1,0 +1,12 @@
+.black-hole{
+    width: 80%;
+    margin: 2em auto;
+}
+.black-hole__text {
+    text-align: center;
+    font-size: 2em;
+}
+.black-hole__btn {
+    display: block;
+    margin: 0 auto;
+}
