@@ -1,6 +1,6 @@
 <h1>Destruction Room</h1>
 <div class="control-group">
-<label for="" class="control-label">Statek</label>
+<label for="" class="control-label">Ship</label>
 <select [formControl]="shipIndexControl">
 <option *ngFor="let ship of spaceShips | async; index as i" [value]="i">
 {{i+1}}. {{ship.modelName}}
@@ -8,5 +8,5 @@
 </select>
 </div>
 <div class="control-group">
-    <button mat-raised-button type="submit" (click)="orderDestruction()">Utylizuj</button>
+    <button mat-raised-button type="submit" (click)="orderDestruction()">Reprocess</button>
 </div>

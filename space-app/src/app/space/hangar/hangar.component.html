@@ -1,6 +1,6 @@
 <div class="main-container">
   <div class="main-container-item">
-    <h1>My hangar</h1>
+    <h1>My Hangar</h1>
     <app-space-ship
       *ngFor="let spaceShip of spaceShips|async"
       [spaceShip]="spaceShip"
@@ -9,10 +9,10 @@
         *ngIf="selectedPilot && !spaceShip.pilot"
         (click)="assignPilot(spaceShip)"
       >
-        Pilotuj
+        Pilot
       </button>
       <button mat-flat-button color="basic" *ngIf="spaceShip.pilot" (click)="deassignPilot(spaceShip)">
-        Opuść
+        Leave
       </button>
     </app-space-ship>
   </div>
@@ -31,4 +31,4 @@
     </div>
   </div>
 </div>
-<!-- TODO: dostosowanie języka -->
+

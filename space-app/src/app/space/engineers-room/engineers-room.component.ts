@@ -17,8 +17,8 @@ interface ShipType {
 })
 export class EngineersRoomComponent implements OnInit {
   spaceShipTypes: ShipType[] = [
-    {label: 'Myśliwiec' , value: SpaceShipType.Fighter},
-    {label: 'Bombowiec' , value: SpaceShipType.Bomber}
+    {label: 'Fighter' , value: SpaceShipType.Fighter},
+    {label: 'Bomber' , value: SpaceShipType.Bomber}
   ]
 
 

@@ -1,11 +1,11 @@
 <div class="engineers-room">
-  <h1>Produkcja statków</h1>
-  <p>Aktualna liczba samolotów to: {{ shipCount | async }}</p>
+  <h1>Production of Ships</h1>
+  <p>Current number of ships is: {{ shipCount | async }}</p>
   <div class="form-container">
     <form [formGroup]="form" (ngSubmit)="orderSpaceShip(form.value)">
       <div class="control-group">
         <mat-form-field appearance="fill">
-          <mat-label>Podaj ilość</mat-label>
+          <mat-label>Enter the amount</mat-label>
           <input
             type="number"
             formControlName="shipCount"
@@ -15,7 +15,7 @@
         </mat-form-field>
 
         <span *ngIf="form.get('shipCount').hasError('required')" class="error"
-          >wprowadź wartość</span
+          >enter a value</span
         >
         <span
           *ngIf="
@@ -23,12 +23,12 @@
             form.get('shipCount').hasError('max')
           "
           class="error"
-          >podaj liczbe z zakresu 1 - 5
+          >enter a number between 1 and 5
         </span>
       </div>
 
       <div class="control-group radio-button">
-        <label class="control-label">Wybierz typ statku:</label>
+        <label class="control-label">Choose the type of ship:</label>
         <label *ngFor="let spaceShipType of spaceShipTypes">
           <input
             type="radio"
@@ -45,9 +45,9 @@
           type="submit"
           [disabled]="form.invalid || isProducing"
         >
-          Produkuj
+          Produce
         </button>
-        <p *ngIf="isProducing">Trwa produkcja...</p>
+        <p *ngIf="isProducing">Production is in progress...</p>
       </div>
     </form>
   </div>
